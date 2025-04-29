@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om's Digital Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- Link to JavaScript -->
+</head>
+<body>
+    <!--  Fixed Header (Always Visible) -->
+    <header>
+        <div class="header-content">
+            <h1>Om's Digital Portfolio</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content">
+        <h2>Welcome to My Portfolio</h2>
+        <p>This is where I showcase my projects, achievements, and skills.</p>
+        <br>
+        <a href="home.html" class="get-started-btn">Get Started</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Om A. Channawar. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Real-time Date & Time -->
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('date-time').innerText = now.toLocaleString();
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+    
+</body>
+</html>
