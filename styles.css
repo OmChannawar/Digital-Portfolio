@@ -611,3 +611,66 @@ html, body {
     color: #555555;
     line-height: 1.6;
 }
+
+/* Main Section */
+.passion-content {
+    padding: 7rem 2rem 4rem; /* Extra padding to account for fixed header */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.passion-content h2 {
+    font-size: 2.2rem;
+    color: #00bfff;
+    margin-bottom: 1rem;
+}
+
+.passion-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #dcdcdc;
+}
+
+/* Certificate Gallery */
+.certificate-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.certificate-item {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-item h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.certificate-item p {
+    font-size: 1rem;
+    color: #cfcfcf;
+    margin-bottom: 1rem;
+}
+
+.certificate-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #00bfff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #00bfff99;
+}
