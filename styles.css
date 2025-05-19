@@ -614,7 +614,7 @@ html, body {
 
 /* Main Section */
 .passion-content {
-    padding: 7rem 2rem 4rem; /* Extra padding to account for fixed header */
+    padding: 10rem 2rem 4rem; /* Extra padding to account for fixed header */
     max-width: 1200px;
     margin: auto;
 }
