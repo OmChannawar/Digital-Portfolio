@@ -651,14 +651,14 @@ html, body {
 }
 
 .certificate-item h3 {
-    color: #ffffff;
+    color: #00bfff;
     font-size: 1.4rem;
     margin-bottom: 0.8rem;
 }
 
 .certificate-item p {
     font-size: 1rem;
-    color: #cfcfcf;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
