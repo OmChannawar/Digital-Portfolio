@@ -53,14 +53,17 @@ header {
 }
 
 .get-started-btn {
-    text-decoration: none;
-    background-color: #007bff;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 18px;
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 1rem;
     font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 .get-started-btn:hover {
@@ -444,9 +447,9 @@ html, body {
 
 /* Optional: Optional styling for the line separator */
 .separator {
-    border: 0;
+    border: 1px;
     height: 1px;
-    background-color: #ddd;
+    background-color: #000000;
     margin-top: 20px;
 }
 
