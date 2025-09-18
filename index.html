@@ -1,89 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏠 Home | Om's Digital Portfolio</title>
+    <title>Home | Om's Digital Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script> <!-- Link JavaScript -->
+    <script src="home.js" defer></script>
 </head>
 
 <body>
-    <!--  Fixed Header (Always Visible) -->
+    <!-- Header -->
     <header>
-        <div class="header-content">
-            <h1>Om's Digital Portfolio</h1>
-        </div>
+        <a href="index.html" class="brand">Om’s Portfolio</a>
         <nav>
             <ul>
-                <li><a href="home.html" class="tab-button">🏠 Home</a></li>
-                <li><a href="projects.html" class="tab-button">💡 Projects</a></li>
-                <li><a href="achievements.html" class="tab-button">🏆 Achievements</a></li>
-                <li><a href="passion.html" class="tab-button">🚀 An Extra Mile</a></li>
-                <li><a href="contact.html" class="tab-button">📬 Contact Me</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="passion.html">An Extra Mile</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home">
-        <!-- About Me Section -->
-        <section class="about-me">
-            <div class="about-image">
-                <img src="profile 1.jpg" alt="Om Channawar" class="home-img">
+    <!-- About Me -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <section class="about-section">
+        <div class="about-me">
+
+            <!-- Profile Card -->
+            <div class="profile-card">
+                <img src="profile 1.jpg" alt="Om Channawar" class="profile-img">
+
+                <h3>Om Channawar</h3>
+                <p><i class="fa-solid fa-cake-candles"></i> <strong>DOB:</strong> 23rd November 2005</p>
+                <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong>
+                    <a href="mailto:premom23112005@gmail.com">premom23112005@gmail.com</a>
+                </p>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/om-channawar-466873312" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/OmChannawar" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/omchannawar05" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
             </div>
+
+            <!-- About Text -->
             <div class="about-text">
                 <h2>About Me</h2>
-                <p>
-                    🙋‍♂️Hello Visitor!<br>
-                    <strong>Om Channawar</strong> here, a passionate developer and tech enthusiast.  
-                    Currently, I am pursuing my UnderGraduate Degree from <u><b>MIT Academy of Engineering</b></u>, specializing in <u><b>Artificial Intelligence & Machine Learning</b></u>.  
-                    I have a strong passion for problem-solving, Full Stack Developing, and exploring new technologies.
-                </p>
-                <p>
-                    💡 <strong><u>Skills & Interests:</u></strong> Web Development, Python.
-                </p>
-                <p>
-                    🎯 <strong><u>Career Goal:</u></strong> To work in a challenging tech environment where I can grow as an AI Engineer and contribute to innovative projects.
-                </p>
-                <p>
-                    📌 <strong><u>Fun Fact:</u></strong> When I'm not coding, you can find me playing Badminton, exploring AI, or reading books!
-                </p>
-            </div>
-            
-        </section>
+                <p>👋 Hello and welcome! I’m <strong>Om Channawar</strong>, a curious mind and passionate developer who
+                    loves turning ideas into real-world solutions. My journey in technology began with a fascination for
+                    how things work, and today, it drives me to keep learning, building, and innovating.</p>
 
-    <!-- Skills Section -->
-    <section class="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <img src="html.png" alt="html">
-                <p>HTML</p>
-            </div>
-            <div class="skill">
-                <img src="css.png" alt="CSS">
-                <p>CSS</p>
-            </div>
-            <div class="skill">
-                <img src="python.png" alt="Python">
-                <p>Python(Basics)</p>
-            </div>
-            <!-- <div class="skill">
-                <img src="mysql.png" alt="MySQL">
-                <p>MySQL</p>
-            </div> -->
-            <div class="skill">
-                <img src="c.png" alt="C Language">
-                <p>C Language</p>
+                <p>🎓 I’m currently pursuing my <strong>Undergraduate Degree</strong> at
+                    <strong>MIT Academy of Engineering</strong>, specializing in
+                    <strong>Artificial Intelligence & Machine Learning</strong>. Along the way, I’ve developed a strong
+                    foundation in <strong>Web Development</strong> and <strong>Python programming</strong>, while also
+                    exploring the limitless potential of AI.
+                </p>
+
+                <p>💡 <strong>What excites me:</strong> Solving real-world problems with creative solutions,
+                    experimenting
+                    with new technologies, and building projects that can make a meaningful impact.</p>
+
+                <p>🎯 <strong>Career Vision:</strong> I aspire to grow as an AI Engineer and contribute to cutting-edge
+                    innovations that bridge the gap between technology and everyday life. For me, every challenge is an
+                    opportunity to learn and every project is a chance to create something valuable.</p>
+
+                <p>🌟 <strong>Beyond Tech:</strong> When I’m not coding, you’ll often find me playing Badminton,
+                    exploring
+                    AI research papers, or diving into books that expand my perspective and creativity.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2025 Om A. Channawar. All rights reserved.</p>
-    </footer>
+    <!-- Skills -->
+    <section class="skills reveal">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="html.png" alt="HTML">
+                <p>HTML5</p>
+            </div>
+            <div class="skill">
+                <img src="css.png" alt="CSS">
+                <p>CSS3</p>
+            </div>
+            <div class="skill">
+                <img src="python.png" alt="Python">
+                <p>Python (Basics)</p>
+            </div>
+            <div class="skill">
+                <img src="c.png" alt="C">
+                <p>C</p>
+            </div>
+            <div class="skill">
+                <img src="cpp-logo.png" alt="C++ logo">
+                <p>C++</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Om A. Channawar. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Om's Digital Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Fixed Header (Always Visible) -->
+    <!-- Header -->
     <header>
-        <div class="header-content">
-            <h1>Om's Digital Portfolio</h1>
-        </div>
+        <a href="index.html" class="brand">Om’s Portfolio</a>
         <nav>
             <ul>
-                <li><a href="home.html" class="tab-button">🏠 Home</a></li>
-                <li><a href="projects.html" class="tab-button">💡 Projects</a></li>
-                <li><a href="achievements.html" class="tab-button">🏆 Achievements</a></li>
-                <li><a href="passion.html" class="tab-button">🚀 An Extra Mile</a></li>
-                <li><a href="contact.html" class="tab-button">📬 Contact Me</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="passion.html">An Extra Mile</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Projects Section -->
     <section class="content">
-        <h2>💡My Projects</h2>
+        <h2>My Projects</h2>
         <p class="projects-intro">
-            Here are some of the projects I have worked on, showcasing my skills in various technologies.
+            A selection of projects that highlight my passion for technology, problem-solving, and hands-on innovation.
+            Each one reflects my journey of learning and applying concepts in real-world scenarios.
         </p>
 
         <div class="project-list">
             <!-- Project 1 -->
             <div class="project-item">
-                <a href="https://youtu.be/GK3xTiYGtpY?si=9xjLgH9xK205kArV" target="_blank">
-                    <img src="wireless power transfer.png" alt="Wireless Power Transfer" class="project-image">
-                </a>
+                <img src="wireless power transfer.png" alt="Wireless Power Transfer" class="project-image">
                 <div class="project-text">
                     <h3>Wireless Power Transfer</h3>
                     <p>
-                        Back in Grade 9, I attended an online session focused on the fundamentals of electricity and its properties. 
-                        During the session, I was introduced to the <b>concept of wireless power transfer — the ability to transmit electrical energy without physical connectors or wires</b>. 
-                        Fascinated by the idea, I followed a guided tutorial and successfully built a mini wireless power transfer device at home.
+                        My very first technical project, inspired during a Grade 9 online session on the fundamentals of
+                        electricity.
+                        I explored the <b>concept of wireless energy transmission without physical connectors</b> and
+                        followed a guided
+                        tutorial to successfully build a working mini wireless power transfer device at home. This
+                        project sparked my
+                        curiosity for practical applications of science and technology.
                     </p>
-                </div>
-            </div>
-        
-            <!-- Project: MystiCode – PIN Generator -->
-             <div class="project-item">
-                <a href="https://omchannawar.github.io/MystiCode/" target="_blank">
-                    <img src="mysticode_preview.png" alt="MystiCode – PIN Generator" class="project-image">
-                </a>
-                <div class="project-text">
-                    <h3>MystiCode – Secure PIN & Code Generator</h3>
-                    <p>
-                        MystiCode is a fast, private, and fully customizable code generator designed for anyone needing random PINs or codes on the go.
-                        Users can choose code length, character types, and generate unique combinations without any data tracking or sign-up required. 
-                        It works 100% offline, supports instant copying, and is ideal for secure, hassle-free generation.
-                    </p>
+
+                    <a class="link" href="https://youtu.be/GK3xTiYGtpY?si=9xjLgH9xK205kArV" target="_blank"><i
+                            class="fa-solid fa-globe"></i></a>
                 </div>
             </div>
 
-        
-            <!-- Project 3: Line Following Robot Basics -->
+            <!-- Project 2 -->
+            <div class="project-item">
+                <img src="mysticode_preview.png" alt="MystiCode – Secure PIN Generator" class="project-image">
+                <div class="project-text">
+                    <h3>MystiCode – Secure PIN & Code Generator</h3>
+                    <p>
+                        A lightweight, offline web app for generating secure, customizable codes and PINs instantly.
+                        <b>No sign-ups, no tracking, and 100% private</b> — users can choose length, characters, and
+                        copy results with one click.
+                        MystiCode is designed for speed, simplicity, and security, making it a practical everyday tool
+                        for anyone.
+                    </p>
+
+                    <a class="link" href="https://github.com/OmChannawar/MystiCode" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                    <a class="link" href="https://omchannawar.github.io/MystiCode/" target="_blank"><i
+                            class="fa-solid fa-globe"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
             <div class="project-item">
                 <a href="https://www.youtube.com/watch?v=Q4AZ6bAYiH8" target="_blank">
                     <img src="line follower.png" alt="Line Following Robot" class="project-image">
                 </a>
                 <div class="project-text">
-                    <h3>Line Following Robot Basics</h3>
+                    <h3>Line Following Robot</h3>
                     <p>
-                        This project covers the fundamentals of building a line-following robot using Arduino, IR sensors, and DC motors. 
-                        Perfect for grasping the basics of autonomous navigation and logical programming using conditional statements.
+                        A beginner-friendly robotics project built with Arduino, IR sensors, and DC motors.
+                        This robot follows a path marked on the ground, teaching the <b>principles of autonomous
+                            navigation
+                            and conditional programming logic</b>. It provided me with hands-on experience in
+                        electronics and coding.
                     </p>
                 </div>
             </div>
-        
-            <!-- Project 4: Obstacle Avoider Robot -->
+
+            <!-- Project 4 -->
             <div class="project-item">
                 <a href="https://www.youtube.com/watch?v=RWwD_DkySLY" target="_blank">
                     <img src="obstacle avoider.jpg" alt="Obstacle Avoider Robot" class="project-image">
@@ -84,16 +99,18 @@
                 <div class="project-text">
                     <h3>Obstacle Avoider Robot</h3>
                     <p>
-                        This project showcases a robot designed to autonomously navigate its environment by detecting and avoiding obstacles. 
-                        Using ultrasonic sensors mounted at the front, the robot continuously scans for nearby objects and adjusts its path to prevent collisions. 
-                        This helps develop skills in sensor integration, logical decision-making, and real-world robotics applications.
+                        An autonomous robot capable of detecting and avoiding obstacles using ultrasonic sensors.
+                        The project improved my understanding of <b>sensor integration, logical decision-making,
+                            and real-world robotics applications</b>. It demonstrated how intelligent systems adapt to
+                        dynamic environments — a foundation for advanced robotics.
                     </p>
                 </div>
             </div>
-        </div>        
+        </div>
     </section>
 
-    <!-- Line separator before footer -->
+
+    <!-- Separator -->
     <hr class="separator">
 
     <!-- Footer Section -->
@@ -101,4 +118,5 @@
         <p>&copy; 2025 Om A. Channawar. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
