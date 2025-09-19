@@ -556,7 +556,7 @@ nav ul li a.active {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  background: #111;
+  background: #1c1c1c;
   border: 1px solid #222;
   padding: 25px;
   border-radius: 12px;
