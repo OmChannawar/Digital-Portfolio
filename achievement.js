@@ -1,17 +1,32 @@
-// Select all achievement cards
-const items = document.querySelectorAll(".achievement-item");
+document.addEventListener("DOMContentLoaded", () => {
+  // =========================
+  // Scroll animations
+  // =========================
+  const scrollItems = document.querySelectorAll(".achievement-item, .reveal");
 
-// IntersectionObserver to trigger animation
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            observer.unobserve(entry.target); // Animate only once
+          entry.target.classList.add("show"); // Add animation class
+          obs.unobserve(entry.target); // Animate only once
         }
-    });
-}, { threshold: 0.2 });
+      });
+    },
+    { threshold: 0.2 } // 20% visible triggers animation
+  );
 
-// Observe each item
-items.forEach(item => {
-    observer.observe(item);
+  scrollItems.forEach((item) => observer.observe(item));
+
+  // =========================
+  // Mobile menu toggle
+  // =========================
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("nav ul");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  }
 });

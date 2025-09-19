@@ -1,3 +1,139 @@
+/* ======================================
+   Responsive Adjustments
+   ====================================== */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #1c1c1c;
+    margin-top: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+  }
+
+  nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .about-image img {
+    max-width: 200px;
+    margin: auto;
+  }
+
+  .content {
+    padding: 60px 20px 30px;
+  }
+
+  /* Projects responsive */
+  .project-item {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .project-image {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 15px;
+  }
+
+  .project-text {
+    padding: 0;
+  }
+
+  .achievement-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .achievement-text {
+    padding-top: 15px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  .profile-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .project-item {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .project-image {
+    max-width: 260px;
+  }
+
+  .project-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-text p {
+    font-size: 0.9rem;
+  }
+
+  .achievement-item {
+    gap: 20px;
+  }
+}
+
 /* ================================
    Home Page - Dark Theme
    ================================ */
@@ -12,7 +148,7 @@
 
 body {
   line-height: 1.6;
-  background: #121212; /* Dark background */
+  background: #121212;
   color: #e0e0e0;
   scroll-behavior: smooth;
 }
@@ -57,6 +193,16 @@ header {
   font-weight: 600;
   color: var(--accent);
   letter-spacing: 1px;
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 nav ul {
@@ -165,7 +311,7 @@ nav ul li a.active {
 .about-image img {
   max-width: 260px;
   border-radius: 12px;
-  border: 2px solid #444; /* Grey border */
+  border: 2px solid #444;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease-in-out;
 }
@@ -281,14 +427,13 @@ nav ul li a.active {
 .content h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #00bcd4; /* Cyan accent */
+  color: #00bcd4;
   font-weight: 700;
   letter-spacing: 0.5px;
   position: relative;
   display: inline-block;
 }
 
-/* Optional underline effect */
 .content h2::after {
   content: "";
   position: absolute;
@@ -300,7 +445,6 @@ nav ul li a.active {
   border-radius: 2px;
 }
 
-/* Section intro */
 .projects-intro {
   font-size: 1rem;
   color: #aaa;
@@ -308,14 +452,12 @@ nav ul li a.active {
   line-height: 1.6;
 }
 
-/* Project Layout */
 .project-list {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-/* Project Card */
 .project-item {
   display: flex;
   flex-direction: row;
@@ -330,15 +472,13 @@ nav ul li a.active {
   gap: 20px;
 }
 
-/* Hover Effect - Low-toned Neon */
 .project-item:hover {
   transform: translateY(-5px);
-  border-color: #00bcd4; /* cyan border */
+  border-color: #00bcd4;
   box-shadow: 0 0 10px rgba(0, 188, 212, 0.3), 0 0 20px rgba(0, 188, 212, 0.2),
-    0 6px 18px rgba(0, 0, 0, 0.45); /* keeps depth */
+    0 6px 18px rgba(0, 0, 0, 0.45);
 }
 
-/* Project Image */
 .project-image {
   width: 230px;
   height: auto;
@@ -356,7 +496,6 @@ nav ul li a.active {
   color: var(--accent);
 }
 
-/* Project Text */
 .project-text {
   flex: 1;
   padding: 10px 12px;
@@ -371,11 +510,10 @@ nav ul li a.active {
 }
 
 .project-item:hover .project-text h3 {
-  color: #00bcd4; /* neon cyan on hover */
+  color: #00bcd4;
   text-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
 }
 
-/* Project Description */
 .project-text p {
   font-size: 0.96rem;
   color: #b5b5b5;
@@ -383,15 +521,13 @@ nav ul li a.active {
   max-width: 95%;
 }
 
-/* Highlighted Text */
 .project-text p strong,
 .project-text p b {
-  color: #00bcd4; /* neon cyan highlight */
+  color: #00bcd4;
   font-weight: 600;
   text-shadow: 0 0 6px rgba(0, 188, 212, 0.35);
 }
 
-/* Separator */
 .separator {
   border: 0;
   height: 1px;
@@ -475,7 +611,54 @@ nav ul li a.active {
 }
 
 .achievement-text b {
-  color: #00bcd4; /* neon cyan highlight */
+  color: #00bcd4;
   font-weight: 600;
   text-shadow: 0 0 6px rgba(0, 188, 212, 0.35);
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;              /* hide menu by default */
+    position: absolute;
+    top: 60px;                  /* below header */
+    right: 10px;
+    background: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 6px;
+    flex-direction: column;
+    width: 180px;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    display: block;
+    text-align: left;
+  }
+
+  nav ul li a:hover {
+    background: #2a2a2a;
+    color: var(--accent);
+  }
+
+  nav ul.show {
+    display: flex; /* shown when toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* show ☰ on mobile */
+  }
 }
