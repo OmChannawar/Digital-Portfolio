@@ -1,0 +1,375 @@
+/* ================================
+   1. Reset & Global Styles
+   ================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --accent: #0ff;
+  --neon-glow: 0 0 8px #00aaff, 0 0 16px #00aaff, 0 0 24px #00aaff;
+}
+
+body {
+  line-height: 1.6;
+  background: #121212;
+  color: #e0e0e0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+strong {
+  color: var(--accent);
+}
+
+/* ================================
+   2. Header & Navigation
+   ================================ */
+header {
+  background: #1c1c1c;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #bbb;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #2a2a2a;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  box-shadow: var(--neon-glow);
+}
+
+/* ================================
+   3. Sections
+   ================================ */
+
+/* Passion / Beyond Boundaries */
+.passion-content {
+  padding: 100px 40px 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.passion-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #0ff;
+  text-align: left;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.passion-content p {
+  text-align: left;
+  font-size: 1.05rem;
+  margin-bottom: 50px;
+  color: #bbb;
+  line-height: 1.7;
+}
+
+/* Certificate / Achievement Gallery */
+.certificate-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.certificate-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: #1c1c1c;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 25px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: border-color 0.3s, box-shadow 0.3s, opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.certificate-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certificate-item:hover {
+  color: #0ff;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.certificate-header {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-details {
+  flex: 2 1 400px;
+}
+
+.certificate-details p {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.certificate-details p b {
+  color: #0ff;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.35);
+}
+
+.certificate-image {
+  max-width: 220px;
+  border-radius: 8px;
+  border: 2px solid #222;
+  transition: 0.3s;
+}
+
+.certificate-image:hover {
+  border-color: #0ff;
+  box-shadow: 0 0 8px #0ff, 0 0 16px #0ff;
+  transform: scale(1.05);
+}
+
+.certificate-title h3 {
+  align-items: center;
+}
+
+.achievement-text {
+  flex: 2 1 400px;
+}
+
+.achievement-text h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #fff;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.achievement-text p {
+  margin-bottom: 10px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.achievement-text b {
+  color: #00aaff;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0, 170, 255, 0.35);
+}
+
+/* ================================
+   4. Footer
+   ================================ */
+.footer {
+  background: #181818;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* ================================
+   5. Animations
+   ================================ */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 6px #00aaff, 0 0 12px #00aaff, 0 0 18px #00aaff;
+  }
+  50% {
+    box-shadow: 0 0 12px #00aaff, 0 0 24px #00aaff, 0 0 36px #00aaff;
+  }
+  100% {
+    box-shadow: 0 0 6px #00aaff, 0 0 12px #00aaff, 0 0 18px #00aaff;
+  }
+}
+
+/* ================================
+   6. Responsive Media Queries
+   ================================ */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #1c1c1c;
+    margin-top: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+  }
+
+  nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .about-image img {
+    max-width: 200px;
+    margin: auto;
+  }
+
+  .content {
+    padding: 60px 20px 30px;
+  }
+
+  .project-item {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .project-image {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 15px;
+  }
+
+  .project-text {
+    padding: 0;
+  }
+
+  .achievement-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .achievement-text {
+    padding-top: 15px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  .profile-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .project-item {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .project-image {
+    max-width: 260px;
+  }
+
+  .project-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-text p {
+    font-size: 0.9rem;
+  }
+
+  .achievement-item {
+    gap: 20px;
+  }
+}

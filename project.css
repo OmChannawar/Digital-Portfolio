@@ -1,0 +1,383 @@
+/* ================================
+   Base & Global Styles
+   ================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --accent: #00aaff;
+  --neon-glow: 0 0 8px #00aaff, 0 0 16px #00aaff, 0 0 24px #00aaff;
+}
+
+body {
+  line-height: 1.6;
+  background: #121212;
+  color: #e0e0e0;
+  scroll-behavior: smooth;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+strong {
+  color: var(--accent);
+}
+
+/* ================================
+   Header & Navigation
+   ================================ */
+header {
+  background: #1c1c1c;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #bbb;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #2a2a2a;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  box-shadow: var(--neon-glow);
+}
+
+/* ================================
+   Content & Sections
+   ================================ */
+.content {
+  padding: 100px 40px 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00bcd4;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 40%;
+  height: 2px;
+  background: #444;
+  border-radius: 2px;
+}
+
+/* Projects */
+.projects-intro {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #1c1c1c;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  padding: 20px;
+  gap: 20px;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3), 0 0 20px rgba(0, 188, 212, 0.2),
+    0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.project-image {
+  width: 230px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover .project-image {
+  transform: scale(1.02);
+}
+
+.project-text {
+  flex: 1;
+  padding: 10px 12px;
+}
+
+.project-text h3 {
+  font-size: 1.35rem;
+  color: #f5f5f5;
+  margin-bottom: 10px;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.project-item:hover .project-text h3 {
+  color: #00bcd4;
+  text-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
+}
+
+.project-text p {
+  font-size: 0.96rem;
+  color: #b5b5b5;
+  line-height: 1.65;
+  max-width: 95%;
+}
+
+.project-text p strong,
+.project-text p b {
+  color: #00bcd4;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0, 188, 212, 0.35);
+}
+
+.link {
+  color: var(--accent);
+}
+
+.separator {
+  border: 0;
+  height: 1px;
+  background: #2a2a2a;
+  margin: 40px 0;
+}
+
+/* ================================
+   Footer
+   ================================ */
+.footer {
+  background: #181818;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer:hover {
+  color: var(--accent);
+  text-shadow: var(--neon-glow);
+}
+
+/* ================================
+   Animations
+   ================================ */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 6px #00aaff, 0 0 12px #00aaff, 0 0 18px #00aaff;
+  }
+  50% {
+    box-shadow: 0 0 12px #00aaff, 0 0 24px #00aaff, 0 0 36px #00aaff;
+  }
+  100% {
+    box-shadow: 0 0 6px #00aaff, 0 0 12px #00aaff, 0 0 18px #00aaff;
+  }
+}
+
+/* ================================
+   Responsive Styles
+   ================================ */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #1c1c1c;
+    margin-top: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+  }
+
+  nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .about-image img {
+    max-width: 200px;
+    margin: auto;
+  }
+
+  .content {
+    padding: 60px 20px 30px;
+  }
+
+  .project-item {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .project-image {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 15px;
+  }
+
+  .project-text {
+    padding: 0;
+  }
+
+  .achievement-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .achievement-text {
+    padding-top: 15px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) 
+{
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  .profile-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .project-item {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .project-image {
+    max-width: 260px;
+  }
+
+  .project-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-text p {
+    font-size: 0.9rem;
+  }
+
+  .achievement-item {
+    gap: 20px;
+  }
+}
