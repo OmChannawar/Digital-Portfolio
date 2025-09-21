@@ -10,6 +10,51 @@
   transform: translateY(0);
 }
 
+/* About Me */
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin: 20px 100px 80px 100px;
+  padding: 100px;
+  background: #181818;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.about-image img {
+  max-width: 260px;
+  border-radius: 12px;
+  border: 2px solid #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+}
+
+.about-image img:hover {
+  border-color: var(--accent);
+  box-shadow: var(--neon-glow);
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: #ddd;
+}
+
 /* Profile Card */
 .profile-card {
   background: #1f1f1f;
@@ -70,56 +115,14 @@
   color: var(--accent);
 }
 
-/* About Me */
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--accent);
-}
-
-.about-me {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  padding: 60px 8%;
-  background: #181818;
-  border-bottom: 1px solid #333;
-}
-
-.about-image img {
-  max-width: 260px;
-  border-radius: 12px;
-  border: 2px solid #444;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s ease-in-out;
-}
-
-.about-image img:hover {
-  border-color: var(--accent);
-  box-shadow: var(--neon-glow);
-  animation: pulseGlow 3s infinite ease-in-out;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.about-text p {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-  color: #ddd;
-}
-
 /* Skills */
 .skills {
+  margin: 10px 100px 80px 100px;
   padding: 60px 8%;
   background: #1c1c1c;
   text-align: center;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border: 1px solid #333;
+  border-radius: 10px;
 }
 
 .skills h2 {

@@ -41,7 +41,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -189,12 +189,29 @@ nav ul li a.active {
   }
 
   .project-item {
+    display: flex;
+    flex-direction: column !important; /* ✅ force override */
+    align-items: center;
+    text-align: center;
     padding: 15px;
     gap: 15px;
+    width: 100%; /* ✅ take full width */
+    box-sizing: border-box;
   }
 
   .project-image {
-    max-width: 260px;
+    max-width: 100%; /* ✅ let image resize */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .project-text {
+    width: 100%; /* ✅ text fits container */
+    max-width: 100%; /* ✅ prevents cutoff */
+    padding: 10px 0;
+    text-align: center;
   }
 
   .project-text h3 {
