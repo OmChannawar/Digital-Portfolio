@@ -6,9 +6,14 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ✅ Ensure background covers entire screen */
+html,
 body {
-  line-height: 1.6;
-  background: #121212;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #121212; /* match body background */
   color: #e0e0e0;
   scroll-behavior: smooth;
 }
@@ -30,12 +35,13 @@ strong {
 
 /* Header */
 header {
+  width: 100%; /* ✅ ensures header spans full width */
   background: #1c1c1c;
   border-bottom: 1px solid #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 8%;
+  padding: 15px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -47,16 +53,6 @@ header {
   font-weight: 600;
   color: var(--accent);
   letter-spacing: 1px;
-}
-
-/* Hamburger menu button */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  color: #00aaff;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
 nav ul {
@@ -96,8 +92,6 @@ nav ul li a.active {
 /* ==============================
    Animations
 ============================== */
-
-/* Keyframes for pulsing glow */
 @keyframes pulseGlow {
   0% {
     box-shadow: 0 0 6px #00aaff, 0 0 12px #00aaff, 0 0 18px #00aaff;
@@ -119,38 +113,27 @@ nav ul li a.active {
   header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px 5%;
-  }
-
-  .menu-toggle {
-    display: block;
+    padding: 15px;
   }
 
   nav ul {
-    display: none;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: row;
     width: 100%;
     background: #1c1c1c;
     margin-top: 10px;
-    border: 1px solid #333;
-    border-radius: 8px;
     padding: 10px 0;
-  }
-
-  nav ul.show {
-    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
   nav ul li a {
     display: block;
-    width: 100%;
-    text-align: center;
-    padding: 12px;
-    border-bottom: 1px solid #333;
-  }
-
-  nav ul li:last-child a {
+    padding: 12px 20px;
     border-bottom: none;
+    text-align: center;
+    color: #ccc;
   }
 
   nav ul li a:hover {
@@ -159,51 +142,13 @@ nav ul li a.active {
   }
 
   nav li {
-    width: 100%;
+    width: auto;
     text-align: center;
-    margin: 5px 0;
+    margin: 0;
   }
 
-  .about-me {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 5%;
-  }
-
-  .about-image img {
-    max-width: 200px;
-    margin: auto;
-  }
-
-  .content {
-    padding: 60px 20px 30px;
-  }
-
-  .project-item {
-    flex-direction: column !important;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .project-image {
-    width: 100%;
-    max-width: 320px;
-    margin-bottom: 15px;
-  }
-
-  .project-text {
-    padding: 0;
-  }
-
-  .achievement-item {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .achievement-text {
-    padding-top: 15px;
+  nav ul:not(.show) {
+    display: flex !important;
   }
 }
 
@@ -218,7 +163,15 @@ nav ul li a.active {
   }
 
   nav ul {
-    gap: 8px;
+    padding: 10px;
+    gap: 0px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  nav ul li a {
+    padding: 10px 10px;
+    font-size: 1rem;
   }
 
   .profile-card {
